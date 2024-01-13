@@ -21,8 +21,8 @@ public class App {
 	}
 
 	@Bean
-	CommandLineRunner run(RoleRepository roleRepository, UserRepository userRepository, PasswordEncoder passwordEncode){
-		return args ->{
+	CommandLineRunner run(RoleRepository roleRepository, UserRepository userRepository, PasswordEncoder passwordEncode) {
+		return args -> {
 			if(roleRepository.findByAuthority("ADMIN").isPresent()) return;
 			Role adminRole = roleRepository.save(new Role("ADMIN"));
 			roleRepository.save(new Role("USER"));
