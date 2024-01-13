@@ -1,4 +1,4 @@
-package com.unkownkoder.models;
+package com.minat.model;
 
 import java.util.Collection;
 import java.util.HashSet;
