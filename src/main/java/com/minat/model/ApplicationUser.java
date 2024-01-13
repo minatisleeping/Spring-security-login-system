@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.minat.model.Role;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -21,7 +20,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="users")
-public class ApplicationUser implements UserDetails{
+public class ApplicationUser implements UserDetails {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
