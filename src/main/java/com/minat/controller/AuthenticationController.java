@@ -1,6 +1,7 @@
 package com.minat.controller;
 
 import com.minat.model.ApplicationUser;
+import com.minat.model.LoginResponseDTO;
 import com.minat.model.RegistrationDTO;
 import com.minat.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,8 @@ public class AuthenticationController {
         return authenticationService.registerUser(body.getUsername(), body.getPassword());
     }
 
-//    @PostMapping("/login")
-//    public LoginResponseDTO loginUser(@RequestBody RegistrationDTO body) {
-//        return authenticationService.loginUser(body.getUsername(), body.getPassword());
-//    }
+    @PostMapping("/login")
+    public LoginResponseDTO loginUser(@RequestBody RegistrationDTO body) {
+        return authenticationService.loginUser(body.getUsername(), body.getPassword());
+    }
 }
